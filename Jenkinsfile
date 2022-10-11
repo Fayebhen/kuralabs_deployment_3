@@ -18,14 +18,13 @@ pipeline {
         sh '''#!/bin/bash
         source test3/bin/activate
         py.test --verbose --junit-xml test-reports/results.xml
-        ''' 
+        '''
       }
     
       post{
         always {
           junit 'test-reports/results.xml'
-        }
-       
+        }       
       }
     }
     stage ('Deploy') {
@@ -40,7 +39,8 @@ pipeline {
             pip install gunicorn
             gunicorn -w 4 application:app -b 0.0.0.0 --daemon
             '''
+             emailext attachLog: true, body: 'This is a deployment stage test', subject: 'Test Email', to: 'fbhenry08@gmail.com'
+            }
         }   
     }
-  }
- }
+}
