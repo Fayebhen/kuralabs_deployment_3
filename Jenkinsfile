@@ -38,6 +38,7 @@ pipeline {
             pip install -r requirements.txt
             pip install gunicorn
             gunicorn -w 4 application:app -b 0.0.0.0 --daemon
+            /var/lib/jenkins/.local/bin/eb deploy url-shortener-main-dev
             '''
              emailext attachLog: true, body: 'This is a deployment stage test', subject: 'Test Email', to: 'fbhenry08@gmail.com'
             }
