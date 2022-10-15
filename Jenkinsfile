@@ -19,7 +19,6 @@ pipeline {
                 source test3/bin/activate
                 py.test --verbose --junit-xml test-reports/results.xml
                 '''
-         #       emailext attachLog: true, body: 'This is a test stage test', subject: 'Test1 Email', to: 'fbhenry08@gmail.com'
                 }
             
                 post{
