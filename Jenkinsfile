@@ -19,6 +19,7 @@ pipeline {
                 source test3/bin/activate
                 py.test --verbose --junit-xml test-reports/results.xml
                 '''
+                emailext attachLog: true, body: 'This is a test stage test', subject: 'Test1 Email', to: 'fbhenry08@gmail.com'
                 }
             
                 post{
@@ -49,7 +50,7 @@ pipeline {
                         pip install gunicorn
                         python3 -m gunicorn -w 4 application:app -b 0.0.0.0:5000 --daemon
                         '''
-                        emailext attachLog: true, body: 'This is a deployment stage test', subject: 'Test Email', to: 'fbhenry08@gmail.com'
+            #            emailext attachLog: true, body: 'This is a deployment stage test', subject: 'Test Email', to: 'fbhenry08@gmail.com'
                 }
             }   
         }
