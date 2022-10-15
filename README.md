@@ -8,7 +8,7 @@ This deployment creates a pipeline by connecting a Jenkins agent in a customized
 
 
 ## TOPOLOGY
-![image](https://user-images.githubusercontent.com/105315302/195988751-12e8ebdd-bdbc-4df4-84dd-bb95e16c8648.png)
+![image](https://user-images.githubusercontent.com/105315302/196010989-b15ac3f6-a05f-4183-ac28-450220b2b3d6.png)
 
 
 
