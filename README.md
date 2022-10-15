@@ -13,4 +13,4 @@ This deployment creates a pipeline by connecting a Jenkins agent in a customized
 
 
 ## DOCUMENTATION
-Documentation folder: https://github.com/kura-labs-org/Template/tree/main/Documentation
+Documentation folder: https://github.com/Fayebhen/kuralabs_deployment_3/blob/main/Deployment-3_Documentation.pdf
