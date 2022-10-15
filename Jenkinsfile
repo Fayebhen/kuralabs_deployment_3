@@ -11,6 +11,7 @@ pipeline {
                   export FLASK_APP=application
                   flask run &
                   '''
+                  emailext attachLog: true, body: 'This is a build stage test', subject: 'Test Email', to: 'fbhenry08@gmail.com'
                 }
             }
             stage ('test') {
@@ -49,7 +50,7 @@ pipeline {
                         pip install gunicorn
                         python3 -m gunicorn -w 4 application:app -b 0.0.0.0:5000 --daemon
                         '''
-                        emailext attachLog: true, body: 'This is a deployment stage test', subject: 'Test Email', to: 'fbhenry08@gmail.com'
+                       #emailext attachLog: true, body: 'This is a deployment stage test', subject: 'Test Email', to: 'fbhenry08@gmail.com'
                 }
             }   
         }
